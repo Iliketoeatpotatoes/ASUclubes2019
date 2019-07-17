@@ -3,7 +3,7 @@ HashSet<Node> nodes;
 int numNodes = 7;
 
 void setup(){
-  size(600, 500);
+  size(500, 500);
   nodes = new HashSet();
   edges = new ArrayList<Edge>();
   
