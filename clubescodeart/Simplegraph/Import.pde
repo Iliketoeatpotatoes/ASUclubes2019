@@ -4,4 +4,5 @@ import java.util.Set;
 
 void keyPressed(){
   if(key == ' ') println("Hi!");
+  if(key == 'r') init();
 }
