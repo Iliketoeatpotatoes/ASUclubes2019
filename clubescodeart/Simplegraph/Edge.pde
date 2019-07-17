@@ -3,9 +3,10 @@ class Edge{
   
   String type; int weight; 
   
-  edge(node origin, Node destination){
-    this.origin = origin;
+  edge(Node origin, Node destination){
+    this.origin= origin;
     this.destination= destination;
     this.weight= int(random(1,70));
   }
+  void draw(){}
 }
