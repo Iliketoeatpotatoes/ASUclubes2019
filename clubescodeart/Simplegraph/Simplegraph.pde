@@ -1,9 +1,9 @@
 ArrayList<Edge> edges;
-HashSet<node> nodes;
+HashSet<Node> nodes;
 int numNodes = 7;
 
 void setup(){
-  size(1200, 500);
+  size(800, 500);
   nodes = new HashSet();
   edges = new ArrayList<Edge>();
   
@@ -15,7 +15,8 @@ void setup(){
   for(Node n1 : nodes){
     for(Node n2 : nodes){
       float x = random(0, 1);
-      if(x <0.4) {Edge e = new Edge(n1,n2);
+      if(x < 0.4){
+        Edge e = new Edge(n1, n2);
         edges.add(e);
       }
     }
@@ -23,7 +24,7 @@ void setup(){
 }
 
 void draw(){
-  background(225);
-  for(edge e :edges) e.draw();
-  for(node n : nodes) n.draw();
+  background(128,0,128);
+  for(Edge e :edges) e.draw();
+  for(Node n : nodes) n.draw();
 }
