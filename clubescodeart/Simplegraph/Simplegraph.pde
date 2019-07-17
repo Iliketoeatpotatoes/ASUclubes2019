@@ -4,7 +4,11 @@ int numNodes = 7;
 
 void setup(){
   size(500, 500);
-  nodes = new HashSet();
+init();
+}
+
+void init(){
+    nodes = new HashSet();
   edges = new ArrayList<Edge>();
   
   for(int i = 0; i<numNodes; i++){
