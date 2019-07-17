@@ -6,7 +6,11 @@ class Edge{
   edge(Node origin, Node destination){
     this.origin= origin;
     this.destination= destination;
-    this.weight= int(random(1,70));
+    this.weight= int(random(1,7));
   }
-  void draw(){}
+  void draw(){
+    stroke(200, 0, 0); strokeWeight(0.5);
+    line(origin.loc.x, origin.loc.y
+    destination.loc.x, destination.loc.y);
+  }
 }
