@@ -2,7 +2,7 @@
 int x, y, x2, y2, x3, y3, x4, y4, x5, y5,
   wallLocation, velX, vel2X, vel3Y, vel4Y, w, h; //variables
 void setup(){ 
-  x=120; y=110; x2=120; y2=550; x3=85; y3=145; x4=100; y4=100; x5=0; y5=0;
+  x=140; y=110; x2=120; y2=550; x3=85; y3=145; x4=550; y4=155; x5=0; y5=0;
   w=800; h=800; wallLocation = 1000; 
   velX=4; vel2X=6; vel3Y=8; vel4Y=2;
   size(625,650); 
@@ -11,8 +11,8 @@ void draw(){ //draws balls
 background(40,40,40);
   fill(1000,10,120); ellipse(x, y, 55, 55);
   x+=velX;  
-  if(x>500) velX = velX*-1;
-  if(x<120) velX = velX*-1;//Pink ball
+  if(x>480) velX = velX*-1;
+  if(x<140) velX = velX*-1;//Pink ball
   
   fill(120,10,120); ellipse(x2, y2, 35, 35);
   x2+=vel2X;
@@ -24,8 +24,8 @@ background(40,40,40);
   if(y3>515) vel3Y = vel3Y*-1;
   if(y3<145) vel3Y = vel3Y*-1;//whiteball
   
-  fill(1000,1000,1000); ellipse(x3, y3, 25, 25);
-  y3+=vel3Y;
+  fill(255,165,0); ellipse(x4, y4, 25, 25);
+  y4+=vel4Y;
   if(y4>515) vel4Y = vel4Y*-1;
   if(y4<145) vel4Y = vel4Y*-1;//orangeball
 
@@ -36,13 +36,13 @@ background(40,40,40);
   
   fill(500,100,1000);
   strokeWeight(5);
-  arc(300,300,100,100, 10, 50);
   
   fill(45,75,90);
   textSize(25);
-  text("I coded this and I like potatoes", 150, 450);//text
-
-  fill(200, 2, 255); 
+  text("I coded this and I like potatoes :0", 150, 450);
+  text("hehe",250,500);
+  fill(200, 2, 255); //text
+  
   rect(x5, y5, w, h); x5+=5; y5+=0; 
 
 }
