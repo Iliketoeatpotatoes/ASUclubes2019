@@ -1,14 +1,18 @@
-int x, y, x2, y2, x3, y3, wallLocation, velX, vel2X, vel3Y; //variables
+
+int x, y, x2, y2, x3, y3, x4, y4, x5, y5,
+  wallLocation, velX, vel2X, vel3Y, vel4Y, w, h; //variables
 void setup(){ 
-  x=120; y=110; x2=120; y2=550; x3=85; y3=145; wallLocation = 1000; 
-  velX=4; vel2X=6; vel3Y=8;
+  x=120; y=110; x2=120; y2=550; x3=85; y3=145; x4=100; y4=100; x5=0; y5=0;
+  w=800; h=800; wallLocation = 1000; 
+  velX=4; vel2X=6; vel3Y=8; vel4Y=2;
   size(625,650); 
 }
 void draw(){ //draws balls
-  background(350); fill(1000,10,120); ellipse(x, y, 25, 25);
+background(40,40,40);
+  fill(1000,10,120); ellipse(x, y, 25, 25);
   x+=velX;  
   if(x>500) velX = velX*-1;
-  if(x<120) velX = velX*-1;//1st ball
+  if(x<120) velX = velX*-1;//Pink ball
   
   fill(120,10,120); ellipse(x2, y2, 25, 25);
   x2+=vel2X;
@@ -19,13 +23,27 @@ void draw(){ //draws balls
   y3+=vel3Y;
   if(y3>515) vel3Y = vel3Y*-1;
   if(y3<145) vel3Y = vel3Y*-1;//whiteball
+  
+  fill(1000,1000,1000); ellipse(x3, y3, 25, 25);
+  y3+=vel3Y;
+  if(y4>515) vel4Y = vel4Y*-1;
+  if(y4<145) vel4Y = vel4Y*-1;//orangeball
 
   fill(40,250,8); rect(510,30,100,100); 
   fill(100,10,280); rect(10,30, 100, 100); 
   fill(400,200,80); rect(510,530,100,100); 
-  fill(300,20,80); rect(10,530,100,100); // squaresdrawn
+  fill(300,20,80); rect(10,530,100,100); //squaresdrawn
   
-  text("I coded this and thats crazy", 150, 450);//text
+  textSize(25);
+  text("I coded this", 150, 450);//text
+  
+  fill(50,50,50); line(50,50,50,50);
+
+  fill(200, 2, 255); 
+  rect(x5, y5, w, h); x5+=5; y5+=0; 
+  
+  fill(50,100,1000);
+  strokeWeight(5);
+  arc(100,100,100,100, 5,5);
+
 }
- 
- 
