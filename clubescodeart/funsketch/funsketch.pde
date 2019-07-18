@@ -1,7 +1,7 @@
 int x, y, x2, y2, x3, y3, wallLocation, velX, vel2X, vel3Y; //variables
 void setup(){ 
   x=120; y=110; x2=120; y2=550; x3=85; y3=145; wallLocation = 1000; 
-  velX=4; vel2X=6; vel3Y=10;
+  velX=4; vel2X=6; vel3Y=8;
   size(625,650); 
 }
 void draw(){ //draws balls
@@ -25,6 +25,7 @@ void draw(){ //draws balls
   fill(400,200,80); rect(510,530,100,100); 
   fill(300,20,80); rect(10,530,100,100); // squaresdrawn
   
+  text("I coded this and thats crazy", 150, 450);//text
 }
  
  
